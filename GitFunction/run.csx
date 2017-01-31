@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
 {
-    log.Info($"Git deployed webhook was triggered!");
+    log.Info($"Git deployed webhook was triggered! - updated with code");
 
     string jsonContent = await req.Content.ReadAsStringAsync();
     dynamic data = JsonConvert.DeserializeObject(jsonContent);
